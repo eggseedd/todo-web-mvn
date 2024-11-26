@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f8fc; /* Light blue background for a calming effect */
+    color: #333; /* Dark text for contrast */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the content area */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    gap: 10px;
+}
+
+.container > * {
+    margin-bottom: 10px; /* Apply margin to all direct children */
+}
+
+
+.center-text {
+    text-align: center;
+    color: #0056b3; /* Blue for titles and headings */
+}
+
+/* Flexbox Layout */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flex-row-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Colors */
+button.edit-button {
+    background-color: #28a745; /* Bright green for edit */
+    color: white;
+}
+
+button.edit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+button.danger-button {
+    background-color: #dc3545; /* Red for delete */
+    color: white;
+}
+
+button.danger-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+button.grey-button {
+    background-color: #6c757d; /* Grey for neutral actions */
+    color: white;
+}
+
+button.grey-button:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+}
+
+/* Ensure type-based rules don't override class-specific rules */
+button[type="submit"]:not(.edit-button):not(.danger-button):not(.grey-button) {
+    background-color: #007bff; /* Bright blue for submit */
+    color: white;
+}
+
+button[type="submit"]:hover:not(.edit-button):not(.danger-button):not(.grey-button) {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="name"] {
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light grey border for clean input fields */
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="name"]:focus {
+    border-color: #80bdff; /* Blue border on focus */
+    outline: none;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .flex-row-div.filter-sort {
+        justify-content: space-between;
+    }
+
+    .flex-row-div.todo-item {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 639px) {
+    .flex-row-div {
+        flex-direction: column;
+    }
+}
+
+/* Highlight To-Do Items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.todo-item {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #eaf4fc; /* Light blue for list items */
+    border: 1px solid #d1e7fd; /* Slightly darker blue border */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+li.todo-item:hover {
+    background-color: #d1e7fd; /* Darker blue on hover */
+}
+
+li.todo-item span {
+    font-weight: bold;
+    color: #333; /* Dark text for readability */
+}
