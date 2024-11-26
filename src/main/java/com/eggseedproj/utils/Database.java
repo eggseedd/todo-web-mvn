@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-    private static final String URL = "jdbc:mysql://root:hMXLcSvuJUlDnpOCFOxvSIVKSDxuCNct@mysql.railway.internal:3306/railway";
+    private static final String URL = "jdbc:mysql://autorack.proxy.rlwy.net:3306/railway";
     private static final String USER = "root";
     private static final String PASSWORD = "hMXLcSvuJUlDnpOCFOxvSIVKSDxuCNct";
 
